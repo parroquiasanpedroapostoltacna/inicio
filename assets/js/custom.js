@@ -671,7 +671,7 @@ if ($(".slider-causes-of-church")[0]){
     images = document.images,
     imagesAmount = images.length,
     imagesLoaded = 0,
-    barCtx = progressBar.getContext('2d'),
+    barCtx = progressBar.getContext('3d'),
     circleCenterX = progressBar.width / 2,
     circleCenterY = progressBar.height / 2,
     circleRadius = circleCenterX - settings.lineWidth,
