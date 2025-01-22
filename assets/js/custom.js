@@ -1,205 +1,107 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Blesso - Crowdfunding & Charity HTML Template
-
-
-
-    Note: This is Custom Js file
-
------------------------------------------------------------------------------------
-
-    Js INDEX
-
     ===================
-
     ## reviews-slider
-
     ## hero-one-slider
-
     ## prayers-slider
-
     ## v-slide
-
     ## sponsors-slider
-
     ## slider-church-prayers
-
     ## hero-three-slider
-
     ## Slider-Causes-Of-Church
-
     ## Counter
-
     ## Tilt on hover
-
     ## Animation on scroll
-
     ## C-slide
-
     ## pd-gallery
-
     ## Loader
-
     ## Cart Popup
-
     ## Scroll top
-
     ## Donation Amount Select On Click
-
     ## Sermon Media
-
     ## Responsive header menu
-
     ## Audio Player
-
-
-
------------------------------------------------------------------------------------*/
-
-
-
-
-
-
+----------------------------------------------------------------------------------*/
 
 jQuery(document).ready(function ($) {
-
-
-
     "use strict";
-
       if ($(".reviews-slider")[0]){
         $('.reviews-slider').slick({
-
             slidesToShow: 1,
-
             slidesToScroll: 1,
-
             arrows: false,
-
             dots: true,
-
             cssEase: 'linear'
-
         });
       }
 
       if ($(".hero-one-slider")[0]){
         $('.hero-one-slider').slick({
-
             slidesToShow: 1,
-
             slidesToScroll: 1,
-
             arrows: true,
-
             dots: false,
-
             cssEase: 'linear'
-
         });
     }
     
 
     if ($(".prayers-slider")[0]){
       $('.prayers-slider').slick({
-
           slidesToShow: 1,
-
           slidesToScroll: 1,
-
           arrows: false,
-
           fade: true,
-
           dots: true,
-
           cssEase: 'linear',
           autoplay: true,
-
           autoplaySpeed: 3000,
-
           speed: 1000 
 
       });
     }
     if ($(".events-carousal-slider")[0]){
           $('.events-carousal-slider').slick({
-
           slidesToShow: 5,
-
           slidesToScroll: 2,
-
           arrows: false,
-
           dots: false,
-
           centerMode: true,
-
           infinite: true,
-
           cssEase: 'linear',
-
           draggable: true,
-
           autoplay: true,
-
           autoplaySpeed: 2000,
-
           speed: 1000,
-
           responsive: [
 
               {
-
                 breakpoint: 1500,
-
                 settings: {
-
                   slidesToShow: 4,
-
                   slidesToScroll: 4,
-
                 }
-
               },
 
               {
-
                 breakpoint: 1300,
-
                 settings: {
-
                   slidesToShow: 3,
-
                   slidesToScroll: 3,
-
                 }
-
               },
 
               {
 
                 breakpoint: 1000,
-
                 settings: {
-
                   slidesToShow: 2,
-
                   slidesToScroll: 2,
-
                 }
-
               },
 
               {
-
                 breakpoint: 800,
-
                 settings: {
-
                   slidesToShow: 2,
-
                   slidesToScroll: 1,
 
                 }
@@ -208,17 +110,11 @@ jQuery(document).ready(function ($) {
               {
 
                 breakpoint: 480,
-
                 settings: {
-
                   slidesToShow: 1,
-
                   slidesToScroll: 1,
-
                 }
-
               },
-
           ]
 
       });
@@ -226,16 +122,11 @@ jQuery(document).ready(function ($) {
     
     if ($(".sponsors-slider")[0]){
         $('.sponsors-slider').slick({
-
             slidesToShow: 5,
-
             slidesToScroll: 3,
-
             arrows: false,
-
             dots: false,
             autoplay: true,
-
             autoplaySpeed: 2000,
 
             speed: 1000,
@@ -374,51 +265,32 @@ jQuery(document).ready(function ($) {
     // Slider-Causes-Of-Church
 if ($(".slider-causes-of-church")[0]){
     $('.slider-causes-of-church').slick({
-
         slidesToShow: 3,
-
         slidesToScroll: 1,
-
         dots: false,
-
         arrows: false,
-
         cssEase: 'ease-in-out',
-
         draggable: true,
-
         autoplay: true,
-
         autoplaySpeed: 3000,
-
         speed: 1300,
         responsive: [
 
                 {
-
                   breakpoint: 1030,
-
                   settings: {
-
                     slidesToShow: 2,
-
                     slidesToScroll: 1,
 
                   }
 
                 },
                 {
-
                   breakpoint: 600,
-
                   settings: {
-
                     slidesToShow: 1,
-
                     slidesToScroll: 1,
-
                   }
-
                 },
 
             ]
@@ -445,19 +317,11 @@ if ($(".slider-causes-of-church")[0]){
 
       var days, hours, minutes, seconds; // variables for time units
 
-
-
       var countdown = document.getElementById("tiles"); // get tag element
-
-
 
       getCountdown();
 
-
-
       setInterval(function () { getCountdown(); }, 1000);
-
-
 
       function getCountdown(){
 
@@ -652,6 +516,8 @@ if ($(".slider-causes-of-church")[0]){
 
   })();
 
+const eventDate = new Date("2025-02-01T10:00:00"); // Fecha del evento (ejemplo)
+    
   setAttributes(preloader, {
     class: "preloader",
     id: 'preloader',
