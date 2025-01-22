@@ -50,7 +50,7 @@
 						<nav>
 
 							<div class="logo" style="display: flex; align-items: center;">
-								 <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+								 <a href="index" style="display: flex; align-items: center; text-decoration: none;">
 										 <img src="assets/images/Logotipo-SanPedro.svg" alt="Logo" style="max-height: 70px; margin-right: 10px;">
 										 <span style="font-size: 1.2rem; font-weight: bold; color: #000;">Parroquia San Pedro Apóstol de Tacna </span>
 								 </a>
@@ -59,7 +59,7 @@
 							<div class="nav-bar">
 								<ul>
 									<li class="menu-item-has-children">
-										<a href="JavaScript:void(0)">Inicio</a>
+										<a href="https://parroquiasanpedroapostoltacna.github.io/inicio/">Inicio</a>
 									</li>
 									<li class="menu-item-has-children"><a href="JavaScript:void(0)">Nosotros</a>
 										<ul class="sub-menu">
@@ -69,7 +69,7 @@
 										</ul>
 									</li>
 									<li><a href="#agenda">Agenda</a></li>
-									<li><a href="contact-us.html" style="padding-right: 10px">Vicanoticias</a></li>
+									<li><a href="#vicanoticias" style="padding-right: 10px">Vicanoticias</a></li>
 								</ul>
 							</div>
 
@@ -93,7 +93,7 @@
 			</div>
 			<ul>
 				<li class="menu-item-has-children">
-					<a href="JavaScript:void(0)">Inicio</a>
+					<a href="https://parroquiasanpedroapostoltacna.github.io/inicio/">Inicio</a>
 				</li>
 				<li class="menu-item-has-children"><a href="JavaScript:void(0)">Nosotros</a>
 					<ul class="sub-menu">
@@ -103,7 +103,7 @@
 					</ul>
 				</li>
 				<li><a href="#agenda">Agenda</a></li>
-				<li><a href="contact-us.html">Vicanoticias</a></li>
+				<li><a href="#vicanoticias">Vicanoticias</a></li>
 			</ul>
 			<a href="JavaScript:void(0)" id="res-cross"></a>
 		</div>
@@ -651,12 +651,12 @@
 	</section>
 
 	<!-- Blog Start -->
-	<section class="gap blog">
+	<section class="gap blog" id="vicanoticias">
 		<div class="container">
 			<div class="heading">
 				<img src="assets/images/heading-img.webp" alt="Heading Image 5">
-				<p>Scandoulous Things Jesus did in his Ministry</p>
-				<h2>Recent Articles</h2>
+				<p>Revisa los momentos y acontecimientos de nuestra comunidad.</p>
+				<h2>VicaNoticias</h2>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-lg-4 col-md-6 col-sm-12">
@@ -703,7 +703,7 @@
 			</div>
 
 			<div class="d-flex justify-content-center loadmore">
-				<a href="blog.html" class="theme-btn">View All Posts</a>
+				<a href="Vicanoticias" class="theme-btn">View All Posts</a>
 			</div>
 		</div>
 	</section>
@@ -753,6 +753,13 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- Custom Js -->
 	<script src="assets/js/custom.js"></script>
+
+	<script> 
+	function scrollToSection(sectionId) {
+	  const element = document.getElementById(sectionId);
+	  element.scrollIntoView({ behavior: 'smooth' });
+	}
+	</script>
 </body>
 
 </html>
