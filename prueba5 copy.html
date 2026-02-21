@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parroquia San Pedro Apóstol de Tacna </title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <!-- Redes Sociales Flotantes -->
+    <div class="social-sidebar d-none d-md-flex" role="complementary">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <!-- Navbar -->
+    <!-- NAVBAR ACTUALIZADO CON SUBMENÚS -->
+    <nav class="navbar navbar-expand-lg fixed-top transition-all">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-800 text-white fs-2" href="#">Booth<span class="brand-dot">.</span></a>
+            
+            <!-- Botón hamburguesa adaptable -->
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-1"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 py-3 py-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link  px-3" href="prueba5.html">Inicio</a>
+                    </li>
+
+                    <!-- SUBMENÚ: PARROQUIA -->
+                    <li class="nav-item dropdown px-lg-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarParroquia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Parroquia
+                        </a>
+                        <ul class="dropdown-menu shadow-lg border-0 rounded-4 p-2" aria-labelledby="navbarParroquia">
+                            <li><a class="dropdown-item fs-6 py-2 rounded-3" href="nosotros.html">Nosotros</a></li>
+                            <li><a class="dropdown-item fs-6 py-2 rounded-3" href="#historia">Historia de la Parroquia</a></li>
+                            <li><a class="dropdown-item fs-6 py-2 rounded-3" href="#sacerdotes">Nuestros Sacerdotes</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#sacramentos">Sacramentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#noticias">VicaNoticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#secretaria">Secretaría</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="#" class="btn-nav btn-lg py-2 px-4 shadow">Get The App</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1548625361-195fe57656ef?q=80&w=2000');">
+                <div class="carousel-caption">
+                    <h1 class="hero-title fw-800">Una Comunidad <br>Que Camina Unida.</h1>
+                    <p class="hero-description">Parroquia San Pedro de Tacna: más de 400 años de fe, tradición y servicio al prójimo desde 1613.</p>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-gradient-red me-4 px-5">Conócenos</button>
+                        <a href="#" class="btn-play"><i class="bi bi-play-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2000');">
+                <div class="carousel-caption">
+                    <h1 class="hero-title fw-800" style="color: #ffc107;">Pastoral Juvenil: <br>Haciendo Lío.</h1>
+                    <p class="hero-description">Como nos dice el Papa: una juventud activa, creativa y llena de fe en nuestras 19 zonas parroquiales.</p>
+                    <button class="btn btn-nav px-5 py-3">Unirme al Grupo</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2000');">
+                <div class="carousel-caption">
+                    <h1 class="hero-title fw-800">Vicarito 400: <br>Nuestra Historia.</h1>
+                    <p class="hero-description">43 años de evangelización a través de nuestra hojita mensual. ¡Descarga la edición especial!</p>
+                    <button class="btn btn-light fw-bold px-5 py-3 rounded-pill">Leer Revista</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3">
+                    <span class="stat-number">411</span>
+                    <span class="stat-text">Años de Historia</span>
+                </div>
+                <div class="col-6 col-md-3 border-divider">
+                    <span class="stat-number">19</span>
+                    <span class="stat-text">Zonas Activas</span>
+                </div>
+                <div class="col-6 col-md-3 border-divider">
+                    <span class="stat-number">400</span>
+                    <span class="stat-text">Ediciones Vicarito</span>
+                </div>
+                <div class="col-6 col-md-3 border-divider">
+                    <span class="stat-number">1k+</span>
+                    <span class="stat-text">Mensajeros</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-100 overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="photo-collage">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000" class="img-main" alt="Comunidad">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600" class="img-sub" alt="Jóvenes">
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-3 fw-800 mb-4 color-blue">Vivir la Fe en <br>Comunidad.</h2>
+                    <p class="lead text-muted mb-4">"En la Iglesia caben todos". Desde 1613 somos testimonio vivo en Tacna. Trabajamos juntos para que el mensaje de Dios llegue a cada hogar de nuestras 19 zonas.</p>
+                    <p class="text-muted mb-5">Nuestra Pastoral Social lleva esperanza incluso en los momentos difíciles, como nuestro servicio en el Penal de Mujeres, demostrando que el amor de Dios no tiene fronteras.</p>
+                    <button class="btn-gradient-red shadow-lg">Descubrir Nuestra Historia</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECCIÓN: MISAS (Refactorizada para Legibilidad y Navegación Rápida) -->
+    <section id="misas" class="py-5 bg-white">
+        <div class="container py-lg-5">
+            <div class="section-header text-center mb-5">
+                <h6 class="text-accent fw-bold text-uppercase fs-6" style="letter-spacing: 3px;">Comunión</h6>
+                <h2 class="display-5 fw-800 color-blue">Horarios de Eucaristía</h2>
+                <div class="mx-auto decoration-line"></div>
+            </div>
+
+            <div class="row g-3"> <!-- g-3 para un espacio limpio entre cartillas -->
+                
+                <!-- Misa Diaria -->
+                <div class="col-12 col-lg-4"> 
+                    <div class="mass-img-card shadow-sm">
+                        <div class="mass-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=1000" alt="Misa Diaria">
+                        <div class="mass-info">
+                            <div class="mass-icon"><i class="bi bi-sun-fill"></i></div>
+                            <div class="mass-text-content">
+                                <h3 class="fw-800">Lunes a Sábado</h3>
+                                <p class="fs-5">06:00 PM</p>
+                                <span class="badge-status">Misa Diaria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Misa Dominical -->
+                <div class="col-12 col-lg-4"> 
+                    <div class="mass-img-card shadow-sm featured-mass">
+                        <div class="mass-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?q=80&w=1000" alt="Misa Dominical">
+                        <div class="mass-info">
+                            <div class="mass-icon"><i class="bi bi-stars"></i></div>
+                            <div class="mass-text-content">
+                                <h3 class="fw-800 text-gold">Día del Señor</h3>
+                                <p class="fs-5 mb-0">09:00 AM | 12:00 PM</p>
+                                <p class="fs-5">06:00 PM</p>
+                                <span class="badge-status bg-gold text-white">Solemne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adoración -->
+                <div class="col-12 col-lg-4"> 
+                    <div class="mass-img-card shadow-sm">
+                        <div class="mass-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?q=80&w=1000" alt="Adoración">
+                        <div class="mass-info">
+                            <div class="mass-icon"><i class="bi bi-moon-stars-fill"></i></div>
+                            <div class="mass-text-content">
+                                <h3 class="fw-800">Adoración</h3>
+                                <p class="fs-5 mb-0">05:00 PM</p>
+                                <span class="badge-status">Hora Santa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN: LLAMADO A LA ACCIÓN (AJUSTADA PARA MÓVIL) -->
+    <section class="cta-serve-section py-5 d-flex align-items-center">
+        <div class="container py-4">
+            <div class="cta-glass-card shadow-lg text-center p-4 p-md-5 mx-auto rounded-5 col-12 col-lg-10">
+                <h6 class="text-gold fw-bold text-uppercase mb-3 fs-6" style="letter-spacing: 2px;">Participación</h6>
+                <h2 class="display-4 fw-800 text-white mb-3 responsive-title">¿Buscas un propósito?</h2>
+                <p class="fs-5 text-white opacity-90 mb-5 lh-base px-lg-5">
+                    Dios te ha dado dones únicos. Hay un lugar especial esperando por ti en nuestra comunidad. 
+                    No camines solo, encuentra tu lugar hoy.
+                </p>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-12 col-md-auto">
+                        <a href="#grupos" class="btn btn-gold-custom btn-lg px-5 py-3 shadow w-100">Unirme ahora</a>
+                    </div>
+                    <div class="col-12 col-md-auto">
+                        <a href="#secretaria" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-bold transition-all w-100">Pedir información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: GRUPOS PARROQUIALES (Estilo Cards Modernas) -->
+    <section id="grupos" class="py-100 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-accent fw-bold text-uppercase" style="letter-spacing: 2px;">Comunidad Viva</h6>
+                <h2 class="display-4 fw-800 color-blue">Nuestros Grupos</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Columna 1: Formación -->
+                <div class="col-lg-4">
+                    <div class="group-card-modern">
+                        <span class="category-badge">Formación</span>
+                        <h3 class="fw-800 mb-4 color-blue">Catequesis</h3>
+                        <div class="group-links">
+                            <a href="#" class="group-item-link"><i class="bi bi-book"></i> Pre-Bautismal</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-heart"></i> Primera Comunión</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-shield-check"></i> Confirmación</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-person-check"></i> Catequesis Adultos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Acción Social -->
+                <div class="col-lg-4">
+                    <div class="group-card-modern" style="border-top: 4px solid var(--accent-red);">
+                        <span class="category-badge">Servicio</span>
+                        <h3 class="fw-800 mb-4 color-blue">Pastorales</h3>
+                        <div class="group-links">
+                            <a href="#" class="group-item-link"><i class="bi bi-lightning-charge"></i> Pastoral Juvenil</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-house-heart"></i> Pastoral Familiar</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-hand-thumbs-up"></i> Pastoral Social</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-music-note-beamed"></i> Liturgia</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Espiritualidad -->
+                <div class="col-lg-4">
+                    <div class="group-card-modern">
+                        <span class="category-badge">Oración</span>
+                        <h3 class="fw-800 mb-4 color-blue">Ministerios</h3>
+                        <div class="group-links">
+                            <a href="#" class="group-item-link"><i class="bi bi-stars"></i> Legión de María</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-brightness-high"></i> Adoradores</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-mic"></i> Coros Parroquiales</a>
+                            <a href="#" class="group-item-link"><i class="bi bi-envelope-paper"></i> Mensajeros Vicarito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: FRASE BÍBLICA -->
+    <section class="quote-section py-100">
+        <div class="container text-center">
+            <div class="quote-icon mx-auto">
+                <i class="bi bi-quote"></i>
+            </div>
+            <h2 class="bible-quote display-6">
+                "La cosecha es abundante, pero los trabajadores son pocos. <br class="d-none d-md-block">
+                Rueguen al dueño de la cosecha que envíe trabajadores."
+            </h2>
+            <p class="text-gold mt-4 fw-bold text-uppercase" style="letter-spacing: 3px; font-size: 0.9rem;">Mateo 9, 37-38</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SECRETARÍA (REDISEÑADA Y ADAPTADA) -->
+    <section id="secretaria" class="py-5 bg-white">
+        <div class="container py-lg-5">
+            <div class="row g-4 align-items-center">
+                <!-- Columna de Imagen -->
+                <div class="col-12 col-lg-5 order-2 order-lg-1">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000" class="rounded-5 shadow-lg img-fluid w-100" alt="Secretaría" style="height: 400px; object-fit: cover;">
+                        <div class="bg-gold position-absolute bottom-0 start-0 m-4 p-3 rounded-4 shadow d-none d-md-block">
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna de Información -->
+                <div class="col-12 col-lg-7 order-1 order-lg-2">
+                    <div class="ps-lg-4 text-center text-lg-start">
+                        <h6 class="text-accent fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Servicios Parroquiales</h6>
+                        <h2 class="display-5 fw-800 color-blue mb-4">Secretaría Parroquial</h2>
+                        <p class="fs-5 text-muted mb-5">Estamos a tu disposición para orientarte en tus procesos de fe y trámites eclesiásticos.</p>
+                        
+                        <!-- Fila de Información (Horario y Dirección) -->
+                        <div class="row g-4 mb-5">
+                            <!-- Card Horario -->
+                            <div class="col-12 col-md-6">
+                                <div class="secretaria-info-card d-flex align-items-center p-3 shadow-sm h-100">
+                                    <div class="info-icon-wrapper me-3">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-uppercase fw-bold text-muted x-small-label">Horario</span>
+                                        <h6 class="fw-800 color-blue mb-0">9:30 AM a 1:00 PM</h6>
+                                        <h6 class="fw-800 color-blue mb-0">4:00 PM a 6:30 PM</h6>
+                                        <p class="small text-muted mb-0">Lunes a Viernes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Dirección -->
+                            <div class="col-12 col-md-6">
+                                <div class="secretaria-info-card d-flex align-items-center p-3 shadow-sm h-100">
+                                    <div class="info-icon-wrapper me-3">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-uppercase fw-bold text-muted x-small-label">Ubicación</span>
+                                        <h6 class="fw-800 color-blue mb-0">Av. Bolognesi 444</h6>
+                                        <p class="small text-muted mb-0">Tacna, Perú</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 d-grid d-md-flex gap-3">
+                            <a href="tel:+511234567" class="btn btn-gradient-red btn-lg px-4 py-3 rounded-pill shadow-sm fs-6">
+                                <i class="bi bi-telephone-fill me-2"></i> Llamar ahora
+                            </a>
+                            <a href="https://wa.me/tu-numero" class="btn btn-outline-dark btn-lg px-4 py-3 rounded-pill fs-6">
+                                <i class="bi bi-whatsapp me-2"></i> Consultas WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Vicarito 
+    <section id="vicarito" class="container pb-5">
+        <div class="vicarito-banner shadow-lg">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="display-4 fw-800 mb-4">¿Quieres leer el <br>Vicarito 400?</h2>
+                    <p class="fs-5 mb-5 opacity-75">Suscríbete para recibir mensualmente la edición digital de nuestra revista y mantente conectado con todas las zonas parroquiales.</p>
+                    <div class="d-flex flex-wrap">
+                        <input type="email" class="input-vicarito" placeholder="Tu correo electrónico">
+                        <button class="btn-vicarito">Suscribirme Ahora</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                    <i class="bi bi-newspaper newspaper-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- SECCIÓN NOTICIAS (NUEVA) -->
+    <section id="noticias" class="py-100 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h2 class="display-4 fw-800 color-blue">Últimas Noticias</h2>
+                    <p class="text-muted">Entérate de lo que sucede en nuestra comunidad</p>
+                </div>
+                <a href="#" class="btn btn-outline-dark rounded-pill px-4">Ver todas</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=600');"></div>
+                        <div class="news-content">
+                            <span class="badge bg-danger mb-2">Pastoral Juvenil</span>
+                            <h5 class="fw-700">Mural PJ: "En la Iglesia caben todos"</h5>
+                            <p class="small text-muted">Nuestros jóvenes culminaron con éxito el mural que representa nuestra unión...</p>
+                            <a href="#" class="text-decoration-none color-red fw-bold">Leer más →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600');"></div>
+                        <div class="news-content">
+                            <span class="badge bg-primary mb-2">Vicarito 400</span>
+                            <h5 class="fw-700">Edición Especial Aniversario</h5>
+                            <p class="small text-muted">Celebramos la llegada al número 400 con testimonios de toda la vida parroquial...</p>
+                            <a href="#" class="text-decoration-none color-red fw-bold">Leer más →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-card">
+                        <div class="news-img" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600');"></div>
+                        <div class="news-content">
+                            <span class="badge bg-success mb-2">Comunidad</span>
+                            <h5 class="fw-700">Taller de Verano para Niños</h5>
+                            <p class="small text-muted">Inscripciones abiertas para los talleres de música y formación espiritual...</p>
+                            <a href="#" class="text-decoration-none color-red fw-bold">Leer más →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: BANNER DE INVITACIÓN (Portal de Fe - Estructura Adaptativa) -->
+    <section class="container footer-cta-container">
+        <div class="portal-invitation shadow-2xl overflow-hidden">
+            <div class="row g-0 align-items-stretch">    
+                
+                <!-- Lado Emocional: Presencial (Ahora es el 1ero en móvil, 2do en escritorio) -->
+                <div class="col-lg-7 portal-main-side p-4 p-md-5 d-flex align-items-center order-1 order-lg-2">
+                    <div class="portal-text-wrapper position-relative z-2 w-100 text-center text-lg-start">
+                        <div class="invitation-badge mb-3">Misa de la Comunidad</div>
+                        <h2 class="display-4 fw-800 text-white mb-3">Vuelve a casa, <br class="d-none d-md-block">Dios te espera con amor.</h2>
+                        <p class="fs-5 text-white opacity-90 lh-lg mb-0">
+                            La Eucaristía es el corazón de nuestra fe. Nada se compara a vivirla juntos, sintiendo el calor de nuestra gran familia parroquial.
+                        </p>
+                    </div>
+                    <div class="portal-glow"></div>
+                </div>
+
+                <!-- Lado Dinámico: Transmisión (Ahora es el 2do en móvil, 1ero en escritorio) -->
+                <div class="col-lg-5 portal-action-side p-4 p-md-5 d-flex align-items-center justify-content-center order-2 order-lg-1">
+                    <div class="stream-glass-card p-4 text-center shadow-lg">
+                        <div class="live-status mb-3">
+                            <span class="pulse-dot"></span> TRANSMISIÓN DIARIA
+                        </div>
+                        <h3 class="fw-800 color-blue mb-1 fs-2">18:00</h3>
+                        <p class="text-uppercase fw-700 text-muted small mb-4" style="letter-spacing: 2px;">Hora Local</p>
+                        <p class="text-muted mb-4 fs-6">Si no puedes asistir hoy, mantente conectado con nuestra transmisión en vivo.</p>
+                        <a href="https://facebook.com/tu-parroquia" target="_blank" class="btn btn-stream-glow w-100 py-3 shadow text-decoration-none">
+                            <i class="bi bi-broadcast me-2"></i> Unirse a la Misa
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER PRINCIPAL -->
+    <footer class="footer-main bg-primary-blue text-white pt-5 pb-4">
+        <div class="container mt-5">
+            <div class="row align-items-center mb-5 gy-4">
+                <div class="col-md-3 text-center text-md-start">
+                    <a class="navbar-brand fw-800 text-white fs-2" href="#">Booth<span class="brand-dot">.</span></a>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-center list-unstyled footer-nav-links">
+                        <li><a href="#inicio" class="nav-link text-white fs-5">Inicio</a></li>
+                        <li><a href="#misas" class="nav-link text-white fs-5">Misas</a></li>
+                        <li><a href="#mision" class="nav-link text-white fs-5">Misión</a></li>
+                        <li><a href="#secretaria" class="nav-link text-white fs-5">Secretaría</a></li>
+                        <li><a href="#noticias" class="nav-link text-white fs-5">Noticias</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center text-md-end footer-social">
+                    <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white" aria-label="YouTube"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-25 mb-5">
+
+            <div class="row align-items-center gy-4 text-center text-lg-start">
+                <div class="col-lg-6">
+                    <p class="fs-6 opacity-75 mb-0 lh-base">
+                        © Todos los derechos reservados. Parroquia San Pedro de Tacna. <br>
+                        Calle Bolognesi 444. Juntos en el camino de la fe.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="newsletter-form d-flex flex-column flex-md-row align-items-center justify-content-lg-end gap-3">
+                        <label for="newsletterEmail" class="fs-6 fw-600 mb-0 opacity-75">Súmate a nuestra comunidad</label>
+                        <div class="input-group newsletter-input-group shadow-sm">
+                            <input type="email" id="newsletterEmail" class="form-control border-0 fs-6" placeholder="Correo electrónico" required>
+                            <button class="btn btn-red-custom px-4 fw-bold" type="submit">Suscribir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace al JS externo -->
+    <script src="script3.js"></script>
+</body>
+</html>

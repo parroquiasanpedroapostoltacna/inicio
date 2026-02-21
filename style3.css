@@ -1,0 +1,1107 @@
+:root {
+    --primary-blue: #14086d;
+    --accent-red: #d32f2f; 
+    --gradient-action: linear-gradient(135deg, #d32f2f 0%, #8e0000 100%);
+    --gradient-orange: linear-gradient(90deg, #d32f2f, #f44336);
+    
+    /* Un Oro real para elementos destacados */
+    --gold: #d4af37; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #2d3436;
+    scroll-behavior: smooth;
+}
+
+.fw-800 { font-weight: 800; }
+.fw-700 { font-weight: 700; }
+.color-blue { color: var(--primary-blue); }
+.color-red { color: var(--accent-red); }
+.py-100 { padding: 100px 0; }
+
+/* --- Navbar --- */
+.navbar {
+    padding: 1rem 1.5rem;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(9, 8, 56, 0.6);
+}
+
+.navbar.scrolled {
+    padding: 0.6rem 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+.btn-nav {
+    background: var(--gradient-action);
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.brand-dot { color: var(--accent-red); }
+
+/* --- ESTILOS MEJORADOS PARA EL NAVBAR Y DROPDOWN --- */
+
+.navbar .nav-link {
+    letter-spacing: 0.5px;
+}
+
+/* Estilo del menú desplegable (Dropdown) */
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.8); /* Azul parroquia con transparencia */
+    backdrop-filter: blur(10px);
+    min-width: 220px;
+    margin-top: 15px !important;
+}
+
+.dropdown-item {
+    color: var(--primary-blue) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-blue) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding-left: 1.5rem; /* Efecto dinámico para jóvenes */
+}
+
+/* Flecha del dropdown blanca */
+.dropdown-toggle::after {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    color: var(--gold);
+}
+
+/* Ajustes para móviles */
+/* --- REFINAMIENTO NAVBAR MÓVIL (Alineación corregida) --- */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--primary-blue);
+        margin-top: 15px;
+        padding: 25px;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        text-align: left; /* Centra todo el contenido en móvil */
+    }
+
+    .navbar-nav {
+        margin-bottom: 20px;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
+    }
+
+    /* Evita que el dropdown flote y desalinee el menú en móvil */
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        border: none !important;
+        box-shadow: none !important;
+        position: static !important; /* Lo mantiene dentro del flujo del menú */
+        float: none !important;
+        width: 100%;
+        margin-top: 5px !important;
+        transform: none !important;
+    }
+
+    .dropdown-item {
+        text-align: center;
+        padding: 12px !important;
+        color: white !important;
+    }
+
+    /* Botón Get The App en móvil */
+    .btn-nav {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+/* --- REFINAMIENTO SECRETARÍA (Iconos y texto alineados) --- */
+.secretaria-info-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(20, 8, 109, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center; /* Alineación vertical perfecta */
+}
+
+@media (max-width: 767px) {
+    .secretaria-info-card {
+        justify-content: flex-start;
+        padding: 1.2rem !important;
+    }
+    
+    #secretaria .text-center.text-lg-start {
+        text-align: left !important; /* Mejor lectura para mayores en móvil */
+    }
+    
+    #secretaria .display-5 {
+        font-size: 2rem !important;
+        text-align: left;
+    }
+
+    #secretaria .mt-5.d-grid {
+        gap: 10px !important;
+    }
+}
+
+/* --- AJUSTE PORTAL DE FE (Banner Invitación Móvil) --- */
+@media (max-width: 991px) {
+    .portal-invitation {
+        text-align: center;
+    }
+
+    .stream-glass-card {
+        transform: rotate(0deg) !important; /* Quitamos la rotación en móvil para mejor alineación */
+        margin-top: 20px;
+        padding: 25px !important;
+    }
+    
+    .portal-text-wrapper {
+        padding: 0 10px;
+    }
+}
+
+/* --- MISAS MÓVIL (Alineación icono/texto) --- */
+@media (max-width: 991px) {
+    .mass-info {
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+
+    .mass-text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+/* --- Hero --- */
+.carousel-item {
+    height: 100vh;
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(20, 8, 109, 0.85) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.carousel-caption {
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8%;
+    max-width: 850px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    max-width: 550px;
+    color: rgba(255,255,255,0.9);
+}
+
+.btn-gradient-orange {
+    background: var(--gradient-orange);
+    color: white; border: none; padding: 16px 40px;
+    border-radius: 50px; font-weight: 700;
+}
+
+.btn-gradient-red {
+    background: var(--gradient-action);
+    color: white; border: none; padding: 16px 40px;
+    border-radius: 50px; font-weight: 700;
+}
+
+.btn-play {
+    width: 60px; height: 60px;
+    background: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: black; font-size: 1.5rem;
+}
+
+/* --- Misas --- */
+.mass-card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.mass-card.highlight {
+    background: var(--primary-blue);
+    border: 2px solid var(--gold); /* Un pequeño detalle de oro para la misa principal */
+    color: white;
+    transform: scale(1.05);
+}
+.mass-card.highlight .bi { color: var(--gold); }
+.text-gold { 
+    color: var(--gold) !important; 
+}
+
+.badge-status.bg-gold {
+    background-color: var(--gold) !important;
+    color: var(--primary-blue) !important;
+    font-weight: 800;
+}
+
+/* --- Misión --- */
+.mission-card {
+    background: white; padding: 40px; text-align: center;
+    border-radius: 24px; box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+}
+
+.icon-circle {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #14086d, #d81b60);
+    border-radius: 50%; margin: 0 auto 25px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 2rem;
+}
+
+.decoration-line { width: 80px; height: 4px; background: var(--accent-red); border-radius: 2px; }
+
+/* --- Secretaría --- */
+.office-box { background: white; padding: 50px; border-radius: 30px; }
+
+/* --- Noticias --- */
+.news-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.news-img { height: 220px; background-size: cover; background-position: center; }
+.news-content { padding: 30px; }
+
+/* --- Nosotros Collage --- */
+.photo-collage { position: relative; }
+.img-main { border-radius: 30px; width: 85%; }
+.img-sub { 
+    position: absolute; bottom: -30px; right: 0; 
+    width: 50%; border: 10px solid white; border-radius: 20px; 
+}
+
+/* --- Banner Vicarito --- */
+.vicarito-banner {
+    background: linear-gradient(90deg, #ff3d7f, #ff7b54);
+    border-radius: 40px 150px 40px 40px;
+    padding: 70px; color: white; margin-top: 80px;
+    position: relative; overflow: hidden;
+}
+
+.newspaper-icon { font-size: 15rem; opacity: 0.15; position: absolute; right: 50px; top: -50px; }
+
+.input-vicarito {
+    border-radius: 12px 0 0 12px;
+    border: none; padding: 18px 25px; width: 65%; font-size: 1.1rem;
+}
+
+.btn-vicarito {
+    border-radius: 0 12px 12px 0;
+    background: var(--primary-blue);
+    color: white; border: none; padding: 18px 35px; font-weight: 700;
+}
+
+/* --- Footer --- */
+.footer-bg { background: var(--primary-blue); color: white; }
+
+/* --- Stats --- */
+.stats-section { background: #ffc107; padding: 60px 0; }
+.stat-number { font-size: 3.5rem; font-weight: 800; color: var(--primary-blue); display: block; }
+.stat-text { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; }
+.border-divider { border-left: 1px solid rgba(0,0,0,0.1); }
+
+/* --- Sidebar --- */
+.social-sidebar {
+    position: fixed; right: 30px; top: 50%; transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 20px; z-index: 1000;
+}
+.social-sidebar a { color: white; font-size: 1.5rem; transition: 0.3s; }
+.social-sidebar a:hover { color: var(--accent-red); transform: translateX(-5px); }
+
+@media (max-width: 992px) {
+    .border-divider { border-left: none; }
+    .vicarito-banner { padding: 40px 20px; border-radius: 30px; }
+    .input-vicarito { width: 100%; border-radius: 12px; margin-bottom: 10px; }
+    .btn-vicarito { width: 100%; border-radius: 12px; }
+}
+
+/* --- Sección Versículos --- */
+.bg-blue-texture {
+    background: linear-gradient(rgba(20, 8, 109, 0.9), rgba(20, 8, 109, 0.9)), 
+                url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+    background-color: var(--primary-blue);
+}
+
+.fw-italic { font-style: italic; }
+.text-gold { color: #ffc107 !important; }
+.decoration-line { width: 60px; height: 5px; background: var(--accent-red); border-radius: 10px; margin-top: 10px; }
+
+/* --- Tarjetas de Grupos --- */
+.group-category-card {
+    background: #fdfdfe;
+    padding: 35px;
+    border-radius: 24px;
+    border-top: 5px solid var(--primary-blue);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.group-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(216, 27, 96, 0.1);
+    border-top-color: var(--accent-red);
+}
+
+.category-title {
+    color: var(--primary-blue);
+    font-weight: 800;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.group-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    color: #555;
+}
+
+.group-list li:last-child { border-bottom: none; }
+
+.mass-img-card {
+    position: relative;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.mass-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.mass-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 8, 109, 0.95) 10%, rgba(20, 8, 109, 0.4) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.mass-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.mass-icon {
+    font-size: 2.5rem;
+    color: var(--accent-red);
+    margin-bottom: 15px;
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/* Hover effects */
+.mass-img-card:hover {
+    transform: translateY(-15px);
+}
+
+.mass-img-card:hover img {
+    transform: scale(1.1);
+}
+
+.featured-mass {
+    border: 3px solid var(--gold);
+    transform: scale(1.05);
+}
+/* --- CTA de Servicio --- */
+
+.cta-serve-section {
+    background: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2000') center/cover fixed;
+    position: relative;
+}
+
+.cta-serve-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 4, 60, 0.6);
+}
+
+.cta-glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.btn-gold-custom {
+    background: linear-gradient(45deg, #ffc107, #e6ae06);
+    color: var(--primary-blue);
+    border: none;
+    border-radius: 50px;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.btn-gold-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
+    background: #fff;
+}
+
+
+/* --- SECCIÓN FRASES (Estilo Minimalista/Podcast) --- */
+.quote-section {
+    background: linear-gradient(135deg, #0a043c 0%, #14086d 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Círculo de luz de fondo para dar profundidad */
+.quote-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(216, 27, 96, 0.15) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.bible-quote {
+    font-family: 'Playfair Display', serif; /* Una fuente más elegante para la frase */
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: var(--accent-red);
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+/* --- SECCIÓN GRUPOS (Estilo "Trending Episodes") --- */
+.group-card-modern {
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 24px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.group-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--accent-red);
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(20, 8, 109, 0.05);
+    color: var(--primary-blue);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.group-item-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    color: #4a5568;
+    text-decoration: none;
+    border-bottom: 1px;
+    border-bottom: 1px solid #f7fafc;
+    transition: 0.2s;
+}
+
+.group-item-link:hover {
+    color: var(--accent-red);
+    padding-left: 5px;
+}
+
+.group-item-link i {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: var(--accent-red);
+}
+
+/* --- SECCIÓN LLAMADO A LA ACCIÓN (Sutil y Elegante) --- */
+.cta-modern {
+    background: #f8fafc;
+    border-radius: 40px;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--primary-blue);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.btn-participate {
+    background: var(--gradient-action);
+    color: white;
+    padding: 18px 45px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.3);
+    transition: 0.3s;
+}
+
+.btn-participate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(216, 27, 96, 0.4);
+    color: white;
+}
+
+/* --- FOOTER REDESIGN (ESTILO SYMPOSIUM) --- */
+
+/* Contenedor del banner para que sobresalga */
+.footer-cta-container {
+    margin-bottom: -60px;
+    position: relative;
+    z-index: 25;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.portal-invitation {
+    background-color: var(--primary-blue);
+    background-image: linear-gradient(135deg, rgba(20, 8, 109, 0.98) 0%, rgba(9, 8, 56, 0.95) 100%), 
+                      url('https://images.unsplash.com/photo-1548625361-195fe57656ef?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portal-main-side {
+    position: relative;
+    overflow: hidden;
+}
+
+.invitation-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(212, 175, 55, 0.2); /* Oro transparente */
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portal-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Tarjeta flotante de Transmisión */
+.stream-glass-card {
+    background: #ffffff;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid white;
+    transform: rotate(-5deg);
+    margin-top: 10px; 
+}
+
+.live-status {
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: var(--accent-red);
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+}
+
+/* Botón con efecto de brillo para Jóvenes */
+.btn-stream-glow {
+    background: var(--gradient-action); /* El rojo catedral de la parroquia */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 800;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-stream-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(211, 47, 47, 0.3);
+    color: white;
+    background: linear-gradient(135deg, #f44336 0%, #b71c1c 100%);
+}
+
+@media (max-width: 991px) {
+    .portal-invitation {
+        border-radius: 30px; /* Bordes un poco menos pronunciados en móvil */
+    }
+    
+    .portal-main-side {
+        padding-top: 3rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .portal-action-side {
+        padding-top: 1rem !important;
+        padding-bottom: 4rem !important; /* Espacio extra abajo para que no pegue con el footer */
+    }
+
+    .portal-invitation h2 {
+        font-size: 1.8rem !important; /* Texto más legible para personas mayores en móvil */
+    }
+
+    .portal-invitation p.fs-5 {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Animación del punto de En Vivo */
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+}
+/****/
+
+.footer-cta-banner {
+    background: linear-gradient(135deg, #14086d 0%, #2a1b9a 100%);
+    border-radius: 40px;
+    position: relative;
+}
+
+/* El "Ticket" visual */
+.ticket-visual {
+    background: white;
+    width: 200px;
+    height: 280px;
+    border-radius: 15px;
+    transform: rotate(-10deg);
+    color: var(--primary-blue);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-header {
+    background: var(--gold);
+    color: white;
+    padding: 10px;
+    font-weight: 800;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.ticket-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Footer Principal */
+.footer-main {
+    background-color: #090838; /* Un azul aún más profundo para el fondo final */
+    padding-top: 150px !important; /* Espacio para el banner que sobresale */
+}
+
+.footer-nav-links .nav-link {
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+.footer-nav-links .nav-link:hover {
+    color: var(--gold) !important;
+}
+
+.footer-social a i {
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.footer-social a:hover i {
+    transform: translateY(-5px);
+    color: var(--gold) !important;
+}
+
+/* Newsletter Form Estilo Symposium */
+.newsletter-input-group {
+    max-width: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    padding: 5px;
+}
+
+.newsletter-input-group .form-control {
+    background: transparent;
+    color: var(--primary-blue);
+}
+
+.newsletter-input-group .form-control:focus {
+    box-shadow: none;
+}
+
+.btn-red-custom {
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 10px !important;
+    transition: background 0.3s;
+}
+
+.btn-red-custom:hover {
+    background-color: #8e0000;
+    color: white;
+}
+
+/* Ajustes Responsive para el Footer */
+@media (max-width: 991px) {
+    .footer-cta-container {
+        margin-bottom: -50px;
+    }
+    .footer-main {
+        padding-top: 100px !important;
+    }
+    .footer-cta-banner {
+        border-radius: 30px;
+    }
+}
+
+/* Efecto hover en el botón de transmisión para jóvenes */
+.btn-outline-light:hover {
+    background-color: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: var(--primary-blue) !important;
+}
+
+/* Ajuste de Newsletter para mayores (más alto para fácil clic) */
+.newsletter-input-group {
+    max-width: 450px;
+    border-radius: 50px !important;
+    overflow: hidden;
+    background: white;
+    padding: 6px;
+}
+
+.newsletter-input-group .form-control {
+    padding-left: 20px;
+    font-size: 1rem;
+}
+
+.btn-red-custom {
+    background-color: var(--accent-red);
+    color: white;
+    border-radius: 50px !important;
+    padding: 10px 25px;
+}
+
+/* --- AJUSTES DE SECRETARÍA REDISEÑADA --- */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.hover-up {
+    transition: transform 0.3s ease;
+}
+
+.hover-up:hover {
+    transform: translateY(-5px);
+}
+
+/* --- MEJORA ESTÉTICA SECRETARÍA --- */
+
+.secretaria-info-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(20, 8, 109, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secretaria-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* El círculo del icono */
+.info-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(20, 8, 109, 0.1) 100%);
+    color: var(--accent-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Icono circular */
+    font-size: 1.5rem;
+    flex-shrink: 0; /* Evita que el círculo se deforme si el texto es largo */
+}
+
+.x-small-label {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Ajuste para que el texto y el icono se alineen perfectamente en móvil */
+@media (max-width: 576px) {
+    .secretaria-info-card {
+        padding: 1.5rem !important;
+    }
+}
+
+/* --- AJUSTES MÓVILES ESPECÍFICOS --- */
+@media (max-width: 767.98px) {
+    /* Llamado a la Acción móvil */
+    .cta-serve-section {
+        min-height: auto !important;
+        padding-top: 80px !important;
+        padding-bottom: 120px !important;
+    }
+    
+    .responsive-title {
+        font-size: 2rem !important; /* Título más pequeño en móvil */
+    }
+
+    .cta-glass-card {
+        padding: 30px 20px !important;
+        border-radius: 30px !important;
+    }
+
+    .cta-glass-card p.fs-5 {
+        font-size: 1.1rem !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Secretaría móvil */
+    #secretaria img {
+        height: 250px !important; /* Imagen más pequeña en móvil */
+        border-radius: 30px !important;
+    }
+
+    #secretaria .display-5 {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* Evitar que los botones peguen al borde */
+.btn-lg {
+    font-size: 1.1rem;
+}
+
+/* --- OPTIMIZACIÓN DE MISAS PARA USUARIO MÓVIL --- */
+@media (max-width: 991px) {
+    /* La cartilla se vuelve horizontal (Imagen izquierda, texto derecha) */
+    .mass-img-card {
+        height: 140px !important; /* Altura compacta para que las 3 se vean juntas */
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        border-radius: 20px !important;
+    }
+
+    .mass-img-card img {
+        width: 35% !important; /* La imagen ocupa una porción lateral */
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .mass-overlay {
+        /* Degradado lateral en lugar de vertical para que el texto sea legible */
+        background: linear-gradient(to right, rgba(20, 8, 109, 0.4) 0%, rgba(20, 8, 109, 0.95) 40%) !important;
+    }
+
+    .mass-info {
+        position: relative !important;
+        width: 65% !important;
+        padding: 10px 15px !important;
+        text-align: left !important; /* Texto alineado para lectura rápida */
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Icono pequeño al lado del contenido */
+    .mass-icon {
+        font-size: 1.8rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    .mass-info h3 {
+        font-size: 1rem !important; /* Texto grande y legible */
+        margin-bottom: 2px !important;
+    }
+
+    .mass-info p {
+        font-size: 0.9rem !important; /* Horarios claros */
+        margin-bottom: 2px !important;
+    }
+
+    .badge-status {
+        margin-top: 5px !important;
+        font-size: 0.65rem !important;
+    }
+
+    /* Eliminar escala para que no se corten entre sí */
+    .featured-mass {
+        transform: scale(1) !important;
+        border: 2px solid var(--gold) !important;
+    }
+}
+
+/* --- CABECERA DE PÁGINA (ESTILO MEGAKIT/SYMPOSIUM) --- */
+
+.page-header {
+    min-height: 450px;
+    background-image: linear-gradient(rgba(10, 4, 60, 0.75), rgba(10, 4, 60, 0.75)), 
+                      url('https://images.unsplash.com/photo-1544427920-c49ccfb85579?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax suave */
+    padding-top: 150px !important;
+}
+
+/* Breadcrumbs estilizados */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 10px;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--gold) !important;
+}
+
+/* Ajuste de Navbar para subpáginas (que siempre empiece oscura) */
+.navbar:not(.scrolled) {
+    background-color: rgba(9, 8, 56, 0.8) !important;
+}
+
+/* --- RESPONSIVE NOSOTROS --- */
+@media (max-width: 991px) {
+    .page-header {
+        min-height: 350px;
+        padding-top: 120px !important;
+    }
+    
+    .page-header h1 {
+        font-size: 2.8rem !important;
+    }
+}
